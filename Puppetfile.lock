@@ -8,6 +8,10 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    pdxcat/collectd (0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+    puppetlabs/apt (1.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/firewall (0.3.1)
     puppetlabs/stdlib (3.2.0)
 
@@ -21,5 +25,7 @@ GIT
 
 DEPENDENCIES
   gds/graphite (>= 0)
+  pdxcat/collectd (~> 0.0)
+  puppetlabs/apt (~> 1.1)
   puppetlabs/stdlib (~> 3.0)
 
