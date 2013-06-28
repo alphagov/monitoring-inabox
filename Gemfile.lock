@@ -13,9 +13,10 @@ GEM
     metaclass (0.0.1)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
-    puppet (3.1.1)
+    puppet (3.2.2)
       facter (~> 1.6)
       hiera (~> 1.0)
+      rgen (~> 0.6)
     puppet-lint (0.3.2)
     puppet-syntax (0.0.4)
       puppet (>= 2.7.0)
@@ -25,7 +26,8 @@ GEM
       rake
       rspec (>= 2.9.0)
       rspec-puppet (>= 0.1.1)
-    rake (10.0.4)
+    rake (10.1.0)
+    rgen (0.6.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -44,7 +46,7 @@ PLATFORMS
 DEPENDENCIES
   facter (~> 1.6.0)
   librarian-puppet (~> 0.9.0)
-  puppet (~> 3.1.0)
+  puppet (~> 3.1)
   puppet-lint (~> 0.3.0)
   puppet-syntax
   puppetlabs_spec_helper (~> 0.4.0)
