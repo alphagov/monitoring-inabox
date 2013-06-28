@@ -23,8 +23,16 @@ GIT
     gds/graphite (0.1.0)
       puppetlabs/apache (>= 0)
 
+GIT
+  remote: git@github.com:alphagov/puppet-gstatsd.git
+  ref: master
+  sha: 0a59e6841110e8fb841acfe5c87dfcffea46b286
+  specs:
+    gds/gstatsd (0.1.0)
+
 DEPENDENCIES
   gds/graphite (>= 0)
+  gds/gstatsd (>= 0)
   pdxcat/collectd (~> 0.0)
   puppetlabs/apt (~> 1.1)
   puppetlabs/stdlib (~> 3.0)
