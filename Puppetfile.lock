@@ -16,6 +16,13 @@ FORGE
     puppetlabs/stdlib (3.2.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-rsyslog.git
+  ref: d897c50
+  sha: d897c506dd9454ffdc37d9583025efe1b4cc3a52
+  specs:
+    rsyslog (1.1.4)
+
+GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
   ref: master
   sha: 997d9c7fa36bedb5b16e543d758212a96a8adf3e
@@ -36,4 +43,5 @@ DEPENDENCIES
   pdxcat/collectd (~> 0.0)
   puppetlabs/apt (~> 1.1)
   puppetlabs/stdlib (~> 3.0)
+  rsyslog (>= 0)
 

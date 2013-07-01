@@ -2,4 +2,5 @@
 classes:
  - gds_apt
  - gds_collectd
+ - gds_logging::client
  - gds_statsd
