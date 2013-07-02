@@ -4,3 +4,13 @@ classes:
  - gds_collectd
  - gds_logging::client
  - gds_statsd
+ - sensu
+sensu::dashboard_port: 8090
+sensu::dashboard_password: mysupersecretpassword
+sensu::install_repo: true
+sensu::purge_config: true
+sensu::rabbitmq_host: 172.16.10.13
+sensu::rabbitmq_password: secret
+sensu::rabbitmq_port: 5672
+sensu::subscriptions: 'sensu-test'
+sensu::use_embedded_ruby: true
