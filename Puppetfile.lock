@@ -1,18 +1,10 @@
 FORGE
-  remote: http://forge.puppetlabs.com
-  specs:
-    puppetlabs/apache (0.6.0)
-      puppetlabs/firewall (>= 0.0.4)
-      puppetlabs/stdlib (>= 2.2.1)
-
-FORGE
   remote: http://forge.puppetlabs.com/
   specs:
     pdxcat/collectd (0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/apt (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/firewall (0.3.1)
     puppetlabs/stdlib (3.2.0)
 
 GIT
@@ -33,10 +25,10 @@ GIT
 GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
   ref: master
-  sha: 997d9c7fa36bedb5b16e543d758212a96a8adf3e
+  sha: 45663a5cd8ed72d7cb8d19e535136cacd893689d
   specs:
     gds/graphite (0.1.0)
-      puppetlabs/apache (>= 0)
+      puppetlabs/stdlib (>= 2.5)
 
 GIT
   remote: git@github.com:alphagov/puppet-gstatsd.git

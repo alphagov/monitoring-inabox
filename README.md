@@ -41,7 +41,10 @@ you. It is split into separate components:
  * **whisper**, which stores metrics on disk and automatically rolls
      up older metrics into a lower resolution to optimise disk usage
  * **graphite webapp**, which renders metrics into pretty graphs or
-       JSON files
+       JSON files. This listens on port 8000; in production use, it
+       would probably be fronted with nginx or apache to expose it on
+       port 80 and/or 443. Configuring this webserver is outside the
+       scope of this module.
 
 [**collectd**](http://collectd.org/) is a daemon which collects
 system statistics and can output them to carbon. It has a large
