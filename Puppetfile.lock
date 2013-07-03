@@ -1,11 +1,20 @@
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    maestrodev/wget (1.2.0)
     pdxcat/collectd (0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/apt (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/firewall (0.3.1)
+    puppetlabs/gcc (0.0.3)
     puppetlabs/stdlib (3.2.0)
+    sensu/sensu (0.7.5)
+      puppetlabs/apt (>= 0.0.0)
+      puppetlabs/stdlib (>= 0.0.0)
+    thomasvandoren/redis (0.0.9)
+      maestrodev/wget (>= 0.0.0)
+      puppetlabs/gcc (>= 0.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-curl.git
@@ -44,6 +53,15 @@ GIT
   specs:
     rsyslog (2.0.0)
 
+GIT
+  remote: git@github.com:puppetlabs/puppetlabs-rabbitmq.git
+  ref: master
+  sha: 44bb086c96bf2e100f8ad149877bc6f2bce53a10
+  specs:
+    puppetlabs/rabbitmq (2.1.0)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+
 DEPENDENCIES
   curl (>= 0)
   gds/graphite (>= 0)
@@ -51,6 +69,9 @@ DEPENDENCIES
   logstash (>= 0)
   pdxcat/collectd (~> 0.0)
   puppetlabs/apt (~> 1.1)
+  puppetlabs/rabbitmq (>= 0)
   puppetlabs/stdlib (~> 3.0)
   rsyslog (>= 0)
+  sensu/sensu (>= 0)
+  thomasvandoren/redis (>= 0)
 

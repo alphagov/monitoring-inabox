@@ -82,7 +82,7 @@ Other tools which you may wish to consider:
  * [**diamond**](http://opensource.brightcove.com/project/diamond) is
    another system metric daemon in the same space as collectd
  * [**statsd**](https://github.com/etsy/statsd/) is the original
-   daemon which gstatsd copies.
+   daemon which gstatsd copies
 
 ### Logging
 
@@ -125,3 +125,21 @@ messages should be logged to disk in /var/log, but remote messages
 arriving via port 514 should not and should only be forwarded to
 logstash.
 
+### Alerting
+
+[**sensu**](http://sensuapp.org/) is a client/server system for running
+monitoring checks and handling results. Checks are defined in the puppet
+manifests (a very simple example is provided) and resultings displayed
+on a dashboard application. Additional handlers can also be configured
+to do things like dispatch emails or SMS messages.
+
+New checks can be written using the
+[sensu-plugin](https://github.com/sensu/sensu-plugin) framework or
+alternatively sensu can use existing Nagios plugins.
+
+#### Alternatives
+
+Other tools you may wish to consider:
+
+ * [**Nagios**](http://www.nagios.org/) is a similar but older
+   monitoring system

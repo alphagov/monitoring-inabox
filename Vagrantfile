@@ -5,6 +5,8 @@ nodes = {
   'graphite' => {:ip => '172.16.10.10', :memory => 512},
   'node1' => {:ip => '172.16.10.11'},
   'logging' => {:ip => '172.16.10.12'},
+  'node2' => {:ip => '172.16.10.13'},
+  'sensu' => {:ip => '172.16.10.14', :memory => 512},
 }
 node_defaults = {
   :domain => 'internal',
@@ -12,7 +14,7 @@ node_defaults = {
 }
 
 Vagrant.configure("2") do |config|
-  config.vm.box     = "puppet-precise64"
+  config.vm.box     = "precise64-puppetlabs"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
   config.vm.provision :puppet do |puppet|
