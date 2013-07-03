@@ -14,7 +14,6 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/firewall (0.3.1)
     puppetlabs/stdlib (3.2.0)
-    saz/rsyslog (2.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-curl.git
@@ -46,6 +45,13 @@ GIT
   specs:
     gds/gstatsd (0.1.0)
 
+GIT
+  remote: git@github.com:philandstuff/puppet-rsyslog.git
+  ref: master
+  sha: a8a6fb40ba43bb39fb6c724bc23bb4b3aa2527ae
+  specs:
+    rsyslog (2.0.0)
+
 DEPENDENCIES
   curl (>= 0)
   gds/graphite (>= 0)
@@ -54,5 +60,5 @@ DEPENDENCIES
   pdxcat/collectd (~> 0.0)
   puppetlabs/apt (~> 1.1)
   puppetlabs/stdlib (~> 3.0)
-  saz/rsyslog (>= 0)
+  rsyslog (>= 0)
 
