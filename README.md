@@ -89,6 +89,24 @@ to a logstash process on the central logging server. The submitted
 logs will appear in /var/log/logstash/all.log, a single file
 aggregating all log events.
 
+#### Logstash json event format
+
+Logstash has a native logging format which sends logs as one JSON
+object per line. This has a number of advantages: the data is simple
+and robust to parse; the data can have richer structure than
+traditional flat formats; and extra fields can be added without
+needing to change downstream parsers.
+
+The earlier in the logging chain you can convert to logstash's JSON
+format, the more information you can preserve in your log message and
+the better you can take advantage of the rich structure of the
+format. Here are some ways to generate JSON event format:
+
+ * For JVM applications using Logback, there is a
+   [logstash logback encoder](https://github.com/logstash/logstash-logback-encoder)
+ * [nginx json event format](http://blog.pkhamre.com/2012/08/23/logging-to-logstash-json-format-in-nginx/)
+ * Apparently rsyslog can also do this too
+
 #### Alternative approaches
 
 In this repository, rsyslog on the client machines talks directly to
