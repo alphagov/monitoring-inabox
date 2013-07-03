@@ -16,11 +16,26 @@ FORGE
     puppetlabs/stdlib (3.2.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-curl.git
+  ref: master
+  sha: f4c6d175bdc6cbd71f71fbaa2544ef8f70c4ce48
+  specs:
+    curl (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-rsyslog.git
   ref: d897c50
   sha: d897c506dd9454ffdc37d9583025efe1b4cc3a52
   specs:
     rsyslog (1.1.4)
+
+GIT
+  remote: git://github.com/electrical/puppet-logstash.git
+  ref: master
+  sha: 33293dbaa80de277df0c3b01d6d5c07dbdd0a4df
+  specs:
+    logstash (0.3.3)
+      puppetlabs/stdlib (>= 3.0.0)
 
 GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
@@ -38,8 +53,10 @@ GIT
     gds/gstatsd (0.1.0)
 
 DEPENDENCIES
+  curl (>= 0)
   gds/graphite (>= 0)
   gds/gstatsd (>= 0)
+  logstash (>= 0)
   pdxcat/collectd (~> 0.0)
   puppetlabs/apt (~> 1.1)
   puppetlabs/stdlib (~> 3.0)

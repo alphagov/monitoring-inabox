@@ -8,3 +8,7 @@ mod 'gds/gstatsd', :git => 'git@github.com:alphagov/puppet-gstatsd.git'
 mod 'rsyslog',
   :git => 'git://github.com/alphagov/puppet-rsyslog.git',
   :ref => 'd897c50'
+mod 'logstash',
+  :git => 'git://github.com/electrical/puppet-logstash.git'
+mod 'curl',
+  :git => 'git://github.com/alphagov/puppet-curl.git'
