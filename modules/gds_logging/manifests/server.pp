@@ -24,7 +24,7 @@ class gds_logging::server {
   }
   logstash::filter::grok {'syslog':
     type      => 'syslog',
-    pattern   => [ '<%{POSINT:syslog_pri}>%{SYSLOGTIMESTAMP:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{PROG:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}' ],
+    pattern   => [ '<%{POSINT:syslog_pri}>%{TIMESTAMP_ISO8601:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{PROG:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}' ],
     add_field => {
       'received_at'   => '%{@timestamp}',
       'received_from' => '%{@source_host}'
