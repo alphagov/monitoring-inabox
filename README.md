@@ -83,9 +83,24 @@ Other tools which you may wish to consider:
 
 ### Logging
 
-The main tool is **rsyslog**. The main server is called `logging`; all
-machines run rsyslog and submit their log events to the central
-logging server. The submitted logs will appear on `logging` in
-`/srv/log`.
+The main tools are **rsyslogd** and **logstash**. The main server is
+called `logging`; all machines run rsyslog and submit their log events
+to a logstash process on the central logging server. The submitted
+logs will appear in /var/log/logstash/all.log, a single file
+aggregating all log events.
 
+#### Alternative approaches
+
+In this repository, rsyslog on the client machines talks directly to
+logstash on port 5544 on the logging.internal machine. An alternative
+is to have local rsyslogs shipping to a remote syslog on
+logging.internal on port 514, which then aggregates all messages and
+ships to logstash on 5544 locally.
+
+The main reason this repository doesn't use this approach is because
+rsyslog configuration is much more complex when different log messages
+must be treated differently. On logging.internal, local syslog
+messages should be logged to disk in /var/log, but remote messages
+arriving via port 514 should not and should only be forwarded to
+logstash.
 
