@@ -5,8 +5,8 @@ nodes = {
   'graphite' => {:ip => '172.16.10.10', :memory => 512},
   'node1' => {:ip => '172.16.10.11'},
   'logging' => {:ip => '172.16.10.12'},
-  'node2' => {:ip => '172.16.10.12'},
-  'sensu' => {:ip => '172.16.10.13', :memory => 512},
+  'node2' => {:ip => '172.16.10.13'},
+  'sensu' => {:ip => '172.16.10.14', :memory => 512},
 }
 node_defaults = {
   :domain => 'internal',
