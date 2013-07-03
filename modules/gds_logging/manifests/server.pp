@@ -1,7 +1,4 @@
 class gds_logging::server {
-  include rsyslog::server
-  include rsyslog::logstash
-
   package {'openjdk-7-jre':
     ensure => installed,
   }
