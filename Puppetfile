@@ -18,3 +18,5 @@ mod 'curl',
 mod 'sensu/sensu'
 
 mod 'thomasvandoren/redis'
+
+mod 'philandstuff/elasticsearch', :git => 'git@github.com:philandstuff/puppet-elasticsearch.git'

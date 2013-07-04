@@ -6,7 +6,6 @@ FORGE
       puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/apt (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/firewall (0.3.1)
     puppetlabs/gcc (0.0.3)
     puppetlabs/stdlib (3.2.0)
     sensu/sensu (0.7.5)
@@ -47,6 +46,14 @@ GIT
     gds/gstatsd (0.1.0)
 
 GIT
+  remote: git@github.com:philandstuff/puppet-elasticsearch.git
+  ref: master
+  sha: e337398d5a27d6639cbef9a87a023838bdc9bf4d
+  specs:
+    philandstuff/elasticsearch (0.0.1)
+      puppetlabs/stdlib (>= 3.0.0)
+
+GIT
   remote: git@github.com:philandstuff/puppet-rsyslog.git
   ref: master
   sha: a8a6fb40ba43bb39fb6c724bc23bb4b3aa2527ae
@@ -68,6 +75,7 @@ DEPENDENCIES
   gds/gstatsd (>= 0)
   logstash (>= 0)
   pdxcat/collectd (~> 0.0)
+  philandstuff/elasticsearch (>= 0)
   puppetlabs/apt (~> 1.1)
   puppetlabs/rabbitmq (>= 0)
   puppetlabs/stdlib (~> 3.0)

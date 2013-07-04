@@ -7,6 +7,7 @@ nodes = {
   'logging' => {:ip => '172.16.10.12'},
   'node2' => {:ip => '172.16.10.13'},
   'sensu' => {:ip => '172.16.10.14', :memory => 512},
+  'elasticsearch-1' => {:ip => '172.16.10.15', :memory => 512}
 }
 node_defaults = {
   :domain => 'internal',
