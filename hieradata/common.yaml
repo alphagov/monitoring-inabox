@@ -4,7 +4,7 @@ classes:
  - gds_collectd
  - gds_logging::client
  - gds_statsd
- - sensu
+ - gds_sensu::client
 sensu::dashboard_port: 8090
 sensu::dashboard_password: mysupersecretpassword
 sensu::install_repo: true

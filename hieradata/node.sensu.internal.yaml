@@ -1,7 +1,6 @@
 ---
 classes:
-  - redis
-  - rabbitmq::server
+  - gds_sensu::server
 redis::version: 2.6.14
 sensu::server: true
 rabbitmq::server::env_config: "RABBITMQ_NODE_PORT=5672\nRABBITMQ_NODE_IP_ADDRESS=172.16.10.14\n"
