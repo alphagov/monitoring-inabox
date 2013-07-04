@@ -86,11 +86,17 @@ Other tools which you may wish to consider:
 
 ### Logging
 
-The main tools are **rsyslogd** and **logstash**. The main server is
-called `logging`; all machines run rsyslog and submit their log events
-to a logstash process on the central logging server. The submitted
-logs will appear in /var/log/logstash/all.log, a single file
-aggregating all log events.
+The main tools are **rsyslogd**, **logstash** and
+**elasticsearch**. The main server is called `logging`; all machines
+run rsyslog and submit their log events to a logstash process on the
+central logging server. The submitted logs will appear in
+/var/log/logstash/all.log a single file aggregating all log
+events. They will also be piped to the elasticsearch instance at
+`elasticsearch-1` -- in practice, this should be a multinode cluster
+with data replication (ie `number_of_replicas` should be 1 or more).
+
+With the data in elasticsearch, you would ordinarily view it using
+[**kibana**](http://kibana.org/).
 
 #### Logstash json event format
 
