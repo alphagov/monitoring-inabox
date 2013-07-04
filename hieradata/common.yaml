@@ -12,3 +12,4 @@ sensu::rabbitmq_password: secret
 sensu::rabbitmq_port: 5672
 sensu::subscriptions: 'sensu-test'
 sensu::use_embedded_ruby: true
+sensu::safe_mode: true

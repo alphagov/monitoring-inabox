@@ -137,9 +137,32 @@ New checks can be written using the
 [sensu-plugin](https://github.com/sensu/sensu-plugin) framework or
 alternatively sensu can use existing Nagios plugins.
 
+#### Security concerns
+
+Most alerting systems work by having a central server initiate checks
+on remote clients. They can work in one of two ways: allow the
+monitoring server to run arbitrary code on the clients, or
+pre-configure a fixed list of checks that the monitoring server is
+allowed to issue to the clients. If you use the first approach, then if
+anybody compromises your monitoring server (or the communication
+medium it uses) then they can control any client that it monitors.
+
+Mitigations to this attack vector are:
+
+ * Sensu
+   * enable the `safe_mode` option, to require all checks to be
+     preconfigured on the clients
+   * enable SSL communication with the rabbitmq server
+ * Nagios/NRPE
+   * don't enable the `dont_blame_nrpe` option
+
 #### Alternatives
 
 Other tools you may wish to consider:
 
  * [**Nagios**](http://www.nagios.org/) is a similar but older
    monitoring system
+   * You could also look at the nagios fork
+     [**Icinga**](https://www.icinga.org/)
+ * [**Alerta**](https://github.com/guardian/alerta) the in-house
+   monitoring system developed at the Guardian
