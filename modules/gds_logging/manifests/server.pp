@@ -59,4 +59,8 @@ class gds_logging::server {
     type => 'syslog',
     path => '/var/log/logstash/all.log',
   }
+  logstash::output::elasticsearch_http {'es':
+    host  => '172.16.10.15',
+    index => 'logs-current',
+  }
 }
