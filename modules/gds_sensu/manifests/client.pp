@@ -1,3 +1,4 @@
+# checks for sensu on client machines
 class gds_sensu::client {
   include sensu
 

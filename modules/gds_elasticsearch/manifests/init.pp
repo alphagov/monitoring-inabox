@@ -1,3 +1,4 @@
+# installed elastic search and supporting software
 class gds_elasticsearch {
   ensure_packages(['openjdk-7-jre'])
 

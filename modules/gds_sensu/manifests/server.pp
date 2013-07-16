@@ -1,3 +1,4 @@
+# installs sensu and supporting software
 class gds_sensu::server {
   include sensu, redis, rabbitmq::server
 
