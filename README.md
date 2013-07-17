@@ -13,12 +13,26 @@ You will need [Ruby](http://www.ruby-lang.org/) (ideally from
 [Bundler](http://gembundler.com/). You will also need
 [Vagrant](http://www.vagrantup.com/) version >= 1.1.
 
+#### Setup
+
+Run bundle to install the ruby gems specified in the gemfile
+```
+bundle
+```
+
+Install Puppet Librarian
+```
+bundle exec librarian-puppet install
+```
+
 A simple `Vagrantfile` is provided to spin up separate VMs playing
 different roles in the monitoring environment. To show the available
 machines, run `vagrant status`. To provision particular machines, run
 `vagrant up <name>`. For example, to explore gstatsd and its
 submission of metrics to graphite, you probably want the `graphite`
 and `node1` machines.
+
+If you've previously had errors running `vagrant up <name>` try running `vagrant reload <name>`
 
 To log into a machine, run `vagrant ssh <name>`.
 
