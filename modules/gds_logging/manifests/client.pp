@@ -1,3 +1,4 @@
+# log to rsyslog
 class gds_logging::client {
   class {'rsyslog':
     purge_rsyslog_d => true,

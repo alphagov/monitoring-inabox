@@ -1,8 +1,9 @@
+# server to collate and present logs
 class gds_logging::server {
   package {'openjdk-7-jre':
     ensure => installed,
   }
-  
+
   curl::fetch { 'logstash-flatjar':
     source      => 'https://logstash.objects.dreamhost.com/release/logstash-1.1.13-flatjar.jar',
     destination => '/var/tmp/logstash-1.1.13-flatjar.jar',
