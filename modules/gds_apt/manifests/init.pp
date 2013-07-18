@@ -1,3 +1,4 @@
+# sets up our package sources and updates
 class gds_apt {
   include 'apt'
   apt::source {'gds-ppa':
