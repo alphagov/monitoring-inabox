@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This repository is no longer maintained.
+
 # monitoring-inabox
 
 This is an example project to demonstrate implementing various
